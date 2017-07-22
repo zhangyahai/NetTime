@@ -244,7 +244,7 @@ INT_PTR CALLBACK MainDlg(HWND hDlg, UINT message, WPARAM wParam, LPARAM lParam)
 				EditPrintf(hwndEdit,TEXT("Connect error #%i."),wError);
 				
 				SendMessage(hDlg,WM_COMMAND,IDC_CANCEL,0);
-//				°¢Ë¹´ï¶à
+
 				return TRUE;
 			}
 			EditPrintf(hwndEdit,TEXT("Connected to %hs.\r\n"),szIPAddr);
@@ -269,7 +269,7 @@ INT_PTR CALLBACK MainDlg(HWND hDlg, UINT message, WPARAM wParam, LPARAM lParam)
 			EditPrintf(hwndEdit,TEXT("Received current time of %u seconds ")
 								TEXT("since Jan. 1 1900.\r\n"),ulTime);
 			
-			
+            //Format the time by the YYYY-MM-DD HH:MM:SS, output to the screnn 			
 
 			ChangeSystemTime(hwndEdit,ulTime);
 			
