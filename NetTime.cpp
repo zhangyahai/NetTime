@@ -244,7 +244,7 @@ INT_PTR CALLBACK MainDlg(HWND hDlg, UINT message, WPARAM wParam, LPARAM lParam)
 				EditPrintf(hwndEdit,TEXT("Connect error #%i."),wError);
 				
 				SendMessage(hDlg,WM_COMMAND,IDC_CANCEL,0);
-
+//				°¢Ë¹´ï¶à
 				return TRUE;
 			}
 			EditPrintf(hwndEdit,TEXT("Connected to %hs.\r\n"),szIPAddr);
