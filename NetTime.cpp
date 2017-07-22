@@ -268,8 +268,13 @@ INT_PTR CALLBACK MainDlg(HWND hDlg, UINT message, WPARAM wParam, LPARAM lParam)
 			ulTime = ntohl(ulTime);
 			EditPrintf(hwndEdit,TEXT("Received current time of %u seconds ")
 								TEXT("since Jan. 1 1900.\r\n"),ulTime);
+			
+			
 
 			ChangeSystemTime(hwndEdit,ulTime);
+			
+			EditPrintf(hwndEdit, TEXT(" The time be checked successful!"));
+
 
 			SendMessage(hDlg,WM_COMMAND,IDC_CANCEL,0);
 
